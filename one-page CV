@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Austin Hill - Software Engineer</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Single Page CV of CODEX, a Software Engineer." />
+    <meta name="keywords" content="Frontend Developer, HTML, CSS, JavaScript, Resume, Web Development" />
+    <meta name="author" content="CODEX" />
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="CODEX - Software Engineer" />
+    <meta property="og:description" content="Single Page CV of CODEX, a Software Engineer." />
+    // i don't know what image i should put here
+    <meta property="og:image" content="https://res.cloudinary.com/duidrgg1k/image/upload/v1725421776/male-technologist_n0fbey.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://CODEX.dev" />
+    <!-- Favicon -->
+     //?? i should put my portfolia in here
+    <link rel="icon" href="https://CODEX.dev/favicon.ico" type="image/x-icon" />
+
+  </head>
+  <body>
+    <header>
+      <h1>Developer CODEX</h1>
+      <h2>Software engineer</h2>
+      <div class="contact info">
+        <address>
+          3-r bag 2-r gudamj 40-r<br />
+          Sukhbaatar 
+          <p>(976) 95841772</p>
+          <p>mongjargalbayr@gmail.com</p>
+        </address>
+      </div>
+    </header>
+    <main>
+      <section class="skills">
+        <h3 class="section-title">Skills</h3>
+        <p>
+          C++, GIT, CSS, Javascript, HTML
+        </p>
+      </section>
+      <section class="education">
+        <h3 class="section-title">Education</h3>
+        <h4>High school diploma</h4>
+        <p>
+        april 2024 to september 2026<br />
+        I gained experience in game developer by 
+        developing and structuring begginer friendly 
+        game projects. With continuous effort and 
+        practical guidance, I effecttively managed to 
+        make accessible 2d game. 
+        </p>
+      </section>
+      <section class="experience">
+        <article>
+         <h4>my life</h4>
+        </article>
+      </section>
+      <section class="internet">
+        <h3 class="section title"> Across the Internet</h3>
+        <a href="https://www.linkedin.com/in/codex-hello-44153b315/?isSelfProfile=true"
+    </section>
+    </main>
+  </body>
+  </HTML>
