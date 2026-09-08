@@ -29,5 +29,33 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: var()
+    background-color: var(--border-color);
+    color: var(--text-color);
+ }
+ cnagelog-container {
+    background-color:  var(--text-color);
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+ }
+ .changelog-container h1 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: var(--text-accent-color);
+ }
+ .timeline-item .timeline-content {
+    font-size: 1rem;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.95);
+    display: inline-block;
+ }
+ .timeline-item:nth-child(even) .timeline-content {
+    left: calc(50% + 10px);
+    text-align: left;
+    padding-left: 20px;
+
  }
