@@ -136,12 +136,4 @@ body {
   .timeline:before {
     left: 10px;
   }
-
-  .timeline-item:before {
-    left: 5px;
-  }
-
-  .timeline-item:nth-child(even):before {
-    left: 5px;
-  }
 }
