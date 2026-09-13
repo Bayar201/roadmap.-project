@@ -106,11 +106,18 @@
     place-items: center;
     pointer-events: none;
 }
+
+.toggle:not(:checked) ~ .form.login,
+.toggle:checked ~ .form.register {
+    pointer-events: auto;
+}
+
 .form form {
     display: flex;
     flex-direction: column;
     width: 270px;
     opacity: 0;
+    pointer-events: auto;
     transition: opacity 0.3s, translate 0.3s;
 }
 .form.register {
