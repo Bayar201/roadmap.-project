@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+    <title>Animated Tab Bar </title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .tab-bar {
+            display: flex;
+            justify-content: center;
+            background: #222;
+            position: relative;
+        }
+        .tab {
+            flex: 1;
+            padding: 14px 20px;
+            text-align: center;
+            color: #ccc;
+            cursor: pointer;
+            transition: color 0.3 ease;
+            position: relative;
+            z-index: 1;
+        }
+        .tab-hover {
+            color: #fff;
+        }
+        .indicator {
+            position: absolute;
+            bottom: 0;
+            height: 3px;
+            background: #ff9800;
+            transition: color 0.3 ease;
+            border-radius: 2px;
+        }
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background: white;
+            animation: fadeIn 0.4s ease;
+        }
+        .tab-content:active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opesity: 0; transform: translateY(10px);}
+            to { opesity: 0; transform: translateY(0);}
+        }
+
+    </style>
+</head>
+<body>
+    <div class="tab-bar">
+        <div class="tab active" data-tab="home">Home</div>
+        <div class="tab" data-tab="CV">CV</div>
+        <div class="tab" data-tab="changelog">Changelog</div>
+        <div class="tab" data-tab="contact">Contact</div>
+        <div class="tab" data-tab="articles">Articles</div>
+        <div class="indicator"></div>
+    </div>
+    <div id="home" class="tab-content active">
+        <h2>Home</h2>
+        <p>Welcome to the home page</p>
+    </div>
+    <div id="CV" class="tab-content">
+        <h2>CV</h2>
+        <p>Click the button for more information</p>
+    </div>
+    <div id="contact" class="tab-content">
+        <h2>Contact</h2>
+        <p>For further assistance reach out to me via or telephone</p>
+    </div>
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const content = document.querySelectorAll('.tab-content');
+        const indicator = document.querySelector('.indicator');
+        function setIndiccator(tab) {
+            indicator.style.width = `${tab.offsetWidth}px`;
+            indicator.style.left = `${tab.offsetLeft}px`;
+        }
+        const activeTab = document.querySelector('.tab.active');
+        setIndicator(activeTab);
+        tabs.foreach(tab=> {
+            tab.addEventListener('click', () => {
+                tab.foreach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                const target = tab.getAttribute('data-tab');
+                contents.forEach( c => {
+                    c.classList.remove('active');
+                    if(c.id === target) c.classList.add('active');
+                });
+                setIndicator('tab')
+            });
+        });
+        window.addEventListener( 'resize', () => {
+            const currentActive = document.querySelector('.tab.active');
+            setIndicator('currentActive');
+        });
+    </script>
+</body>
+</html>
