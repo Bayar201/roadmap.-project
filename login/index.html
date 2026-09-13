@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="card">
+        <input class="toggle" id="account-toggle" type="checkbox">
+        <div class="card-bg card-bg-1"></div>
+        <div class="card-bg card-bg-2"></div>
+        <div class="switch register">
+            <label for="account-toggle">
+                Register 
+                <span aria-hidden="true">&#8594;</span></label>
+        </div>
+        <div class="switch login">
+            <label for="account-toggle">
+                <span class="matterial aria-hidden="true">&#8592;</span> Login</label>
+        </div>
+        <section class="form login">
+            <form>
+                <h1>Welcome back</h1>
+                <label for="login-email">Email</label>
+                <input id="login-email" type="email" required>
+                <label for="login-password">Password</label>
+                <input id="login-password" type="password" required>
+                <button type="submit">Log in</button>
+            </form>
+        </section>
+        <section class="form register">
+            <form>
+                <h1>Create account</h1>
+                <label for="register-name">Name</label>
+                <input id="register-name" type="text" required>
+                <label for="register-email">Email</label>
+                <input id="register-email" type="email" required>
+                <label for="register-password">Password</label>
+                <input id="register-password" type="password" required>
+                <button type="submit">Register</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
