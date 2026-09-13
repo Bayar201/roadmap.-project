@@ -213,4 +213,28 @@ body {
     color: white;
     font: inherit;
     cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+}
+
+.form button:hover {
+    background: #6247d1;
+}
+
+.form button:active {
+    transform: scale(0.98);
+}
+
+.form-message {
+    margin-top: 12px;
+    font-size: 0.85rem;
+    text-align: center;
+    min-height: 20px;
+}
+
+.form-message.success {
+    color: #27ae60;
+}
+
+.form-message.error {
+    color: #e74c3c;
 }
