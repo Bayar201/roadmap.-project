@@ -122,6 +122,7 @@
 }
 .form.register {
     left: 50%;
+    position: relative;
 }
 .form.register form{
     translate: 320px 0;
@@ -219,7 +220,7 @@ body {
     background: var(--color-primary);
     color: white;
     font: inherit;
-    cursor: pointer;
+    cursor: cursor;
     transition: background 0.3s, transform 0.1s;
 }
 
