@@ -62,8 +62,8 @@
     left: 0;
     padding-top: 100px;
     pointer-events: none;
-
 }
+
 .switch label {
     display: inline-flex;
     align-items: center;
