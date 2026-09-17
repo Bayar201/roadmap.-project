@@ -121,8 +121,7 @@
     transition: opacity 0.3s, translate 0.3s;
 }
 .form.register {
-    left: 50%;
-    position: relative;
+    left: 250px;
 }
 .form.register form{
     translate: 320px 0;
