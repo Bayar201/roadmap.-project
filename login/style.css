@@ -49,7 +49,7 @@
     animation: card-bg-2-login 1.2s both;
 }
 .switch {
-    position: relative;
+    position: absolute;
     z-index: 4;
     top: 0;
     left: 0;
@@ -62,11 +62,12 @@
 .switch.register {
     left: 50%;
     padding-top: 100px;
+    pointer-events: none;
 }
 .switch.login {
     left: 0;
-    padding-top: -20px;
-
+    pointer-events: none;
+    padding-top: 100px;
 
 }
 .switch label {
