@@ -65,7 +65,7 @@
 }
 .switch.login {
     left: 0;
-    transfrorm: translateY(-10px);
+    padding-top: -20px;
 
 
 }
