@@ -30,22 +30,16 @@
     left: auto;
     transform-origin: 100% 100%;
 }
-.toggle:not(:checked)
-~ .card-bg-1 {
+.toggle:not(:checked) ~ .card-bg-1 {
     animation: card-bg-register 1.2s both;
-
 }
-.toggle:checked
-~ .card-bg-1 {
+.toggle:checked ~ .card-bg-1 {
     animation: card-bg-login 1.2s both;
 }
-.toggle:not(:checked)
-~ .card-bg-2 {
+.toggle:not(:checked) ~ .card-bg-2 {
     animation: card-bg-2-register 1.2s both;
-
 }
-.toggle:checked
-~ .card-bg-2 {
+.toggle:checked ~ .card-bg-2 {
     animation: card-bg-2-login 1.2s both;
 }
 .switch {
@@ -66,8 +60,8 @@
 }
 .switch.login {
     left: 0;
-    pointer-events: none;
-    padding-top: 100px;
+
+
 
 }
 .switch label {
@@ -79,11 +73,10 @@
     border: 1px solid rgb(249 249 249 / 55%);
     color: #f9f9f9;
     opacity: 0;
+    pointer-events: none;
     transition: opacity 0.3s, translate 0.3s, background 0.25s, color 0.25s, border-color 0.25s;
 }
-.switch.register label {
-    translate: 0;
-}
+.switch.register label,
 .switch.login label {
     translate: 0;
 }
@@ -109,7 +102,7 @@
     width: 50%;
     display: grid;
     place-items: center;
-    pointer-events: auto;
+    pointer-events: none;
 }
 
 .toggle:not(:checked) ~ .form.login,
@@ -122,25 +115,24 @@
     flex-direction: column;
     width: 270px;
     opacity: 0;
-    pointer-events: auto;
+    pointer-events: none;
     transition: opacity 0.3s, translate 0.3s;
 }
 .form.register {
     left: 250px;
     padding-top: 50px;
 }
-.form.register form{
+.form.register form {
     translate: 320px 0;
-} 
+}
 .form.login form {
     translate: -320px 0;
 }
-.toggle:not(:checked)
-~ .form.login form,
-.toggle:checked
-~ .form.register form {
+.toggle:not(:checked) ~ .form.login form,
+.toggle:checked ~ .form.register form {
     opacity: 1;
     translate: 0;
+    pointer-events: auto;
     transition: 0.4s 0.8s;
 }
 
@@ -153,6 +145,7 @@
 .toggle:checked ~ .form.login form {
     opacity: 0;
     translate: -320px 0;
+    pointer-events: none;
 }
 
 .toggle:checked ~ .form.register form {
@@ -164,29 +157,30 @@
 .toggle:not(:checked) ~ .form.register form {
     opacity: 0;
     translate: 320px 0;
+    pointer-events: none;
 }
 @keyframes card-bg-register {
-    0%{ rotate: -45deg; }
-    50%{ opacity: 1; }
-    50%, 100%{ rotate: 0deg; }
-    50.01%, 100%{ opacity: 0; }
+    0% { rotate: -45deg; }
+    50% { opacity: 1; }
+    50%, 100% { rotate: 0deg; }
+    50.01%, 100% { opacity: 0; }
 }
 @keyframes card-bg-login {
-    0%{ opacity: 0; rotate: 0deg; }
-    50%{ rotate: 0deg; opacity: 0; }
-    50%, 100%{ rotate: 0deg; }
-    50.01%, 100%{ opacity: 1; }
-    100%{ rotate: -45deg; }
+    0% { opacity: 0; rotate: 0deg; }
+    50% { rotate: 0deg; opacity: 0; }
+    50%, 100% { rotate: 0deg; }
+    50.01%, 100% { opacity: 1; }
+    100% { rotate: -45deg; }
 }
 @keyframes card-bg-2-register {
-    0%, 50%{ rotate: 0deg; opacity: 0; }
-    50.01%, 100%{ opacity: 1; rotate: 0; }
-    100%{ opacity: 1; rotate: 45deg; }
+    0%, 50% { rotate: 0deg; opacity: 0; }
+    50.01%, 100% { opacity: 1; rotate: 0; }
+    100% { opacity: 1; rotate: 45deg; }
 }
 @keyframes card-bg-2-login {
-    0%{ rotate: 45deg; opacity: 1; }
-    50%, 100%{  rotate: 0deg; opacity: 1; }
-    50.01%, 100%{ opacity: 0; }
+    0% { rotate: 45deg; opacity: 1; }
+    50%, 100% { rotate: 0deg; opacity: 1; }
+    50.01%, 100% { opacity: 0; }
 }
 
 body {
