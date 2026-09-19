@@ -1,3 +1,4 @@
 # roadmap.-project
 testimonial card solution
-file:///C:/Users/Chaak/source/repos/Game/CALCULATOR/roadmap.project.html/roadmap.-project/testimonial-card/index.html
+
+https://htmlpreview.github.io/?https://github.com/Bayar201/roadmap.-project/blob/main/testimonial-card/index.html
