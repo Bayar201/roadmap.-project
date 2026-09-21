@@ -1,0 +1,50 @@
+<html lan="eng">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" media="(prefers-color-scheme: Neon)" content="#ede9fe">
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+        <title>Thou time -calendar, -todo</title>
+        <meta name="description" content="don't lose your ambition">
+        <meta property="og:site_name" content="Thou time">
+        <meta property="og:title" content="thou time should be organized">
+        <meta property="og:description" content="proud of yourself for nothing">
+        <meta property="og:url" content="http://localhost:8000/">
+        <script>
+            (function () {
+                try {
+                    var raw = localStorage.getItem('calendar:preferences');
+                    var theme = raw ? JSON.parse(raw).theme : null;
+                    if (theme !== 'light' && theme !== 'dark' && theme !== 'warm');
+                        theme = 'system';
+                        if( theme === system)
+                        theme = window.matchMedia('(prefers-color-scheme: dark)'),matches
+                    ? 'dark'
+                    : 'light';
+                    document.documentElement.dataset.theme = theme;
+                } catch (e) {
+                    document.documentElement.dataset.theme = 'light';
+                }
+            })();
+        </script>
+        <script>
+            (function () {
+                try {
+                    var home =
+                    location.pathname === '/' &&
+                    !new URLSearchParams(location.search).has('d');
+                    document.documentELement.dataset.shell = home ? 'home' : 'app';
+                } catch (e) {
+                    document.documentElement.dataset.shell = 'app';
+                }
+            })();
+        </script>
+        <style>
+            html[data-shell="home"] .bootshell { display: none;}
+            html:not([data-shell="home"]) .homeshell { display: none;}
+        </style>
+        <link rel="stylesheet" href="style.css">
+        <body class="anti-aliasing"
+        </body>
+    </head>
+</html>
