@@ -53,17 +53,18 @@
     align-content: start;
     justify-items: center;
 }
-.switch.register {
+.switch.register {    
+    left: 0;
+    padding-top: 100px;
+    pointer-events: none;
+}
+
+.switch.login {
     left: 50%;
     padding-top: 100px;
     pointer-events: none;
 }
-.switch.login {
-    left: 0;
-    padding-top: 100px;
-    pointer-events: none;
 
-}
 .switch label {
     display: inline-flex;
     align-items: center;
