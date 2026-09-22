@@ -15,12 +15,14 @@
                 try {
                     var raw = localStorage.getItem('calendar:preferences');
                     var theme = raw ? JSON.parse(raw).theme : null;
-                    if (theme !== 'light' && theme !== 'dark' && theme !== 'warm');
+                    if (theme !== 'light' && theme !== 'dark' && theme !== 'warm') {
                         theme = 'system';
-                        if( theme === system)
-                        theme = window.matchMedia('(prefers-color-scheme: dark)'),matches
-                    ? 'dark'
-                    : 'light';
+                    }
+                    if (theme === 'system') {
+                        theme = window.matchMedia('(prefers-color-scheme: dark)').matches
+                            ? 'dark'
+                            : 'light';
+                    }
                     document.documentElement.dataset.theme = theme;
                 } catch (e) {
                     document.documentElement.dataset.theme = 'light';
@@ -33,7 +35,7 @@
                     var home =
                     location.pathname === '/' &&
                     !new URLSearchParams(location.search).has('d');
-                    document.documentELement.dataset.shell = home ? 'home' : 'app';
+                    document.documentElement.dataset.shell = home ? 'home' : 'app';
                 } catch (e) {
                     document.documentElement.dataset.shell = 'app';
                 }
@@ -44,7 +46,38 @@
             html:not([data-shell="home"]) .homeshell { display: none;}
         </style>
         <link rel="stylesheet" href="style.css">
-        <body class="anti-aliasing"
-        </body>
     </head>
+    <body class="anti-aliasing">
+            <script>
+                window._reactRouterContext?.streamController?.unqueue(
+                    '[{"_1":2,"_3":5,"_4":-5},"loaderdata",{},"actiondata","errors"]\n'
+                );
+            </script>
+            <!---DOn't know--->
+            <script>
+                window._reactRouterContext.streamController.close();
+            </script>
+            <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6d…" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"bd78b35319b740809f322b401fc1065c","r":1,"spa":2}' crossorigin="anonymous"></script>
+            <div id="_r_1_" data-base-ui-portal>
+                <div tabindex="-1" 
+                role="region" 
+                aria-live="polite" 
+                aria-atomic="false"
+                aria-relevant="additions text" 
+                aria-label="Notification" 
+                data-testid="toaster" 
+                class="toast-viewport"></div>
+            </div>
+            <main data-testid="home-page" 
+            data-interactive="true" 
+            class="flex min-h-dvh item-center justify-center px-6 py-12 sm:py-16">
+            <div class="logo-full max-w-[400px]">
+                <a href="/" class="logo" aria-label="Home">
+                    <svg viewbox="0 0 100 100" width="50" height="50">
+                        <path d="M35 20h30v60H35z" />
+                    </svg>
+                </a>    
+            </div>
+            </main>
+        </body>
 </html>
