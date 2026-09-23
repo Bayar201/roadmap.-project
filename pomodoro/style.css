@@ -1,0 +1,24 @@
+.anti-aliasing {
+    -webkid-font-smoother: antialiased;
+    -moz-osx-font-smoother: grayscale;
+
+}
+body {
+    background: var(--call-bg);
+    color: var(--call-text);
+    -webkid-font-smoothing: antialiased;
+
+}
+a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    -webkit-text-decoration: inherit;
+    -webkit-text-decoration: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+}
+.logo {
+    position: absolute;
+    padding: 2px;
+
+}
