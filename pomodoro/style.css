@@ -1,24 +1,21 @@
-.anti-aliasing {
-    -webkid-font-smoother: antialiased;
-    -moz-osx-font-smoother: grayscale;
-
+body{
+    background: #c9d1ce;
+    position: relative;
+}.home-page {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1.5rem;
 }
-body {
-    background: var(--call-bg);
-    color: var(--call-text);
-    -webkid-font-smoothing: antialiased;
-
+.title {
+    display: block;
+    white-space: nowrap;
+    color: var(--cal-title)
 }
-a {
-    color: inherit;
-    -webkit-text-decoration: inherit;
-    -webkit-text-decoration: inherit;
-    -webkit-text-decoration: inherit;
-    -webkit-text-decoration: inherit;
-    text-decoration: inherit;
+.text {
+    color: #0a2e44;
 }
-.logo {
-    position: absolute;
-    padding: 2px;
-
+.house {
+    
 }
