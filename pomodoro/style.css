@@ -1,7 +1,11 @@
+:root {
+   --cal-faint: #8a9692; 
+}
 body{
     background: #c9d1ce;
     position: relative;
-}.home-page {
+}
+.home-page {
     display: flex;
     min-height: 100vh;
     align-items: center;
@@ -16,6 +20,13 @@ body{
 .text {
     color: #0a2e44;
 }
-.house {
+.calendar {
+    display: flex;
+    justify-content: center;
+    color: var(--cal-faint);
+}
+.login {
+    margin-top: 8 4px;
     
 }
+
