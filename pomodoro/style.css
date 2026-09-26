@@ -20,11 +20,6 @@ body{
 .text {
     color: #0a2e44;
 }
-.calendar {
-    display: flex;
-    justify-content: center;
-    color: var(--cal-faint);
-}
 .login {
     margin-top: 8 4px;
     
